@@ -55,20 +55,40 @@ body {
 
 
 
-	.Banner {
+.Banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+
+
 .info {
   background-color:lightgoldenrodyellow;
   border-left: 6px solid #2196F3;
   text-decoration-color: Blue;
 }
 
+
+
+
+
+
+
 .invitation {
-  background-color:yellow;
+  background-color:lightgoldenrodyellow;
   border-left: 6px solid #2196F3;
   text-decoration-color:Green;
 }
+
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
 
