@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///Users/shuvshaw/Desktop/AK_WEBSITE/fees_payment.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customers td, .customers th {
+  border: 1px solid yellowgreen;
+  padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: royalblue;
+  color: white;
+}
+
+
+</style>
+
+</head>
+<body>
+<p><br>
+	<br>
+
+</p>
+<input type="text" value="9007422341@paytm" id="myInput">
+
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Click to copy the UPI</span>
+  Copy UPI ID
+  </button>
+</div>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied Successfully " 
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Click to copy the UPI";
+}
+</script>
+
+<br>
+<br>
+<table class="customers">
+    <thead>
+      <tr>
+        <th>Account Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bank Name:</td>
+        <td>Punjab National Bank</td>
+      </tr>      
+      <tr>
+        <td>IFSC Code:</td>
+        <td>PUNB0141400</td>
+      </tr>      
+      
+       
+      <tr>
+        <td>Branch Name:</td>
+        <td>Paikpara</td>
+      </tr>      
+     
+      <tr>
+        <td>Account No:</td>
+        <td>0104010398534</td>
+      </tr>      
+     
+      <tr>
+        <td>Account Name:</td>
+        <td>Shuv Shaw</td>
+      </tr>      
+     
+
+
+    </tbody>
+  </table>
+
+
+
+<img src="./fees_payment_files/Payment_Details.jpg" h="">
+
+
+</body></html>
