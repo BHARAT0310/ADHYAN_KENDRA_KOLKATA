@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+<style type="text/css">
+  :root{
+  --back: #ff6038;
+  --overlay: #ff603877;
+  --light-font-color: #fff;
+  --gray: #777;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--gray);
+  font-weight: normal;
+}
+
+
+.main{
+  min-height: 100vh;
+  background-color: var(--back);
+  font-size: 12px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.card{
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: 2px 20px 40px rgba(0,0,0, 0.5);
+          box-shadow: 2px 20px 40px rgba(0,0,0, 0.5);
+  -webkit-animation: comein 2s ease-in-out;
+          animation: comein 2s ease-in-out;
+}
+
+@-webkit-keyframes comein{
+  0%{
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+    opacity: 0;
+  }
+
+  50%{
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0.8;
+  }
+
+  100%{
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes comein{
+  0%{
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+    opacity: 0;
+  }
+
+  50%{
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0.8;
+  }
+
+  100%{
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+.profile_container{
+  height: 300px;
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--overlay)), to(#000000cc));
+  background-image: -o-linear-gradient(top left, var(--overlay), #000000cc);
+  background-image: linear-gradient(to bottom right, var(--overlay), #000000cc);
+  top:0px;
+  width: 100%;
+  height: 100%;
+}
+
+.card > div > img{
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  -webkit-filter: contrast(1.4);
+          filter: contrast(1.4);
+}
+
+button{
+  outline: none;
+  border:none;
+}
+
+.overlay > button{
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  color: var(--light-font-color);
+  background-color: #ffffff00;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.overlay >  h1{
+  position: absolute;
+  bottom : 3rem;
+  left: 2.5rem;
+  color: var(--light-font-color);
+}
+
+.overlay > span{
+  display: block;
+  width: 70px;
+  background-color: #fff;
+  height: 2px;
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+}
+
+.overlay > h4{
+  position: absolute;
+  color: var(--back);
+  bottom: 1rem;
+  left: 2.5rem;
+}
+
+
+.content_container{
+  padding: 2rem;
+}
+
+.content_container > h3{
+  color: #767096;
+  border-bottom: 2px solid #767096;
+  display: inline-block;
+  line-height: 2.4em;
+}
+
+.content_container > div{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content_container > div > div:nth-child(1){
+  margin-right: 0.8rem;
+  padding-top: 1rem;
+}
+
+
+span.orange{
+  color: var(--back);
+}
+
+.icon_container{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button_container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button_container > a{
+  background-color: var(--back);
+  border-radius: 18px;
+  padding: 0.5rem 1.5rem;
+  color: var(--light-font-color);
+  border: 2px solid var(--back);
+  font-size: 1em;
+  -webkit-box-shadow: 2px 6px 10px #00000044;
+          box-shadow: 2px 6px 10px #00000044;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.count_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.count_container > div{
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.count_container > div > h3{
+  font-size: 2em;
+}
+
+.count_container > div > p{
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+
+
+.icon_container > span > svg{
+  width: 20px;
+  margin: 0.4rem;
+}
+
+.icon_container > span > svg:hover{
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  stroke: #000;
+}
+</style>
+</head>
+<body>
+<div class="main">
+  
+  <div class="card">
+    <div class="profile_container">
+      <img src = "Adhyan Kendra Logo.jpeg"/>
+      <div class="overlay">
+        <button>. . .
+        </button>
+        <h1>ADHYAN<br/>KENDRA</h1>
+        <span></span>
+        <h4>FOUNDED 2018</h4>
+      </div>
+    </div>
+
+    <div class="content_container">
+      <h3>About</h3>
+
+      <div>
+        <div>
+          <p>Channel Make For Education Purpes. Contact : <span class="orange">8777532327 <span>.</p>
+          <div class="icon_container">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+
+            </span>  
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+</svg>
+
+            </span>  
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+</svg>
+
+            </span>  
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+</svg>
+
+            </span>  
+          </div>
+          <div class="button_container">
+            <a href="https://youtube.com/@adhyankendrakolkata1682" target="_blank">Our YouTube Channel</a>
+          </div>
+        </div>
+
+        <div class="count_container">
+          <div>
+            <h3>30</h3>
+            <p>Videos</p>
+          </div>
+
+          <div>
+            <h3>120</h3>
+            <p>Subscribers</p>
+          </div>
+
+          <div>
+            <h3>2.5k+</h3>
+            <p>Views</p>
+          </div>
+
+        </div>  
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</body>
+</html>
